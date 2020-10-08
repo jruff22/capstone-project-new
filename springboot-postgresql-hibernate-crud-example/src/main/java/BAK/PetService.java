@@ -1,12 +1,9 @@
-package com.ruff.springbootpostgresql.service;
+package BAK;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.ruff.springbootpostgresql.model.pet;
-import com.ruff.springbootpostgresql.repository.PetRepository;
 
 @Service
 public class PetService {

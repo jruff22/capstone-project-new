@@ -1,10 +1,8 @@
-package com.ruff.springbootpostgresql.service;
+package BAK;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ruff.springbootpostgresql.model.Employee;
-import com.ruff.springbootpostgresql.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {
@@ -21,4 +19,12 @@ public class EmployeeService {
 		return employees;
 	}
 
+	public Employee findById(Long id) throws Exception {
+		Employee employee = employeeRepository.findById(id).orElse(null);
+		if(employee == null) {
+			throw new Exception("Cannot find Employee with id: " + id);
+		}
+		else
+			return employee;
+	}
 }

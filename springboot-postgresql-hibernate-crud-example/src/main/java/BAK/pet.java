@@ -1,4 +1,4 @@
-package com.ruff.springbootpostgresql.model;
+package BAK;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

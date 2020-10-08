@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Customer List </title>
+	</head>
+	<body>
+	<h1> Customer List </h1>
+	<div>
+		<table border = "1">
+			<tr>
+				<th>Customer ID</th>
+				<th>Loan ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+			<tr th:each= "customer_info : ${customerInfo.loan_info}"> 
+			<td th:utext = "${loan_info.customer_id}">...</td>
+			<td th:utext= "${loan_info.loan_id}">...</td>	
+			<td th:utext= "${loan_info.first_name}">...</td>
+			<td th:utext= "${loan_info.last_name}">...</td>		
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
