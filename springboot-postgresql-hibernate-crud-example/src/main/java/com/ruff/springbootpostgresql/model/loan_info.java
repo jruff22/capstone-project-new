@@ -1,4 +1,4 @@
-package BAK;
+package com.ruff.springbootpostgresql.model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,13 +24,14 @@ public class loan_info {
 			sequenceName="cloan_info_loan_info_seq",
 			allocationSize=1
 			)
-	private long loan_info;
-	@Column(name = "loan_info")
-	private long loan_id;
+	private Long loan_id;
+	
 	@Column(name = "loan_number")
 	private long loan_number;
+	
 	@Column(name = "payment_due_date")
 	private Date payment_due_date;
+	
 	@Column(name = "payment_amt")
 	private double payment_amt;
 	
@@ -47,11 +48,11 @@ public class loan_info {
 		this.payment_amt = payment_amt;
 	}
 
-	public long getLoan_id() {
+	public Long getLoan_id() {
 		return loan_id;
 	}
 
-	public void setLoan_id(long loan_id) {
+	public void setLoan_id(Long loan_id) {
 		this.loan_id = loan_id;
 	}
 

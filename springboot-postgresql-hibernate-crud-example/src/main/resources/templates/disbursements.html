@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Disbursements</title>
+	</head>
+	<body>
+		<h1>Disbursements</h1>
+		<div>
+			<nobr>
+				<a th:href="@{/}">Home</a>
+				<a th:href="@{/customer-info}">Customer Info</a>
+			</nobr>
+		</div>
+		<br/><br/>
+		<div>
+			<table border="1">
+				<tr>
+					<th>loan ID</th>
+					<th>creditor</th>
+					<th>amount_paid</th>
+					<th>date_sent</th>
+					<th>acct_number</th>
+					<th>disbursement_id</th>
+				</tr>
+				
+				<tr th:each="d : ${disbursements}">
+					<td th:utext="${d.loan_id}">...</td>
+					<td th:utext= "${d.creditor}">...</td>
+					<td th:utext="${d.amount_paid}">...</td>
+					<td th:utext= "${d.date_sent}">...</td>
+					<td th:utext="${d.acct_number}">...</td>
+					<td th:utext="${d.disbursement_id}">...</td>
+				</tr>
+				
+				</table>
+				<h2>The End</h2>
+                 </div>
+                </body>
+</html>

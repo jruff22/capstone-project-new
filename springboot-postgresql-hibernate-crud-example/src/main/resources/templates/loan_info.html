@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Loan Info</title>
+	</head>
+	<body>
+		<h1>Loan Info</h1>
+		<div>
+			<nobr>
+				<a th:href="@{/}">Home</a>
+			</nobr>
+		</div>
+		<br/><br/>
+		<div>
+			<table border="1">
+				<tr>
+					<th>Loan Id</th>
+					<th>Loan Number</th>
+					<th>Payment Due Date</th>
+					<th>Payment Amount</th>
+				</tr>
+				
+				<tr th:each="loan: ${loan_info}">
+					<td th:utext="${loan.loan_id}">...</td>
+					<td th:utext= "${loan.loan_number}">...</td>
+					<td th:utext="${loan.payment_due_date}">...</td>
+					<td th:utext= "${loan.payment_amt}">...</td>
+				</tr>
+				
+				</table>
+				<h2>The End</h2>
+                 </div>
+                </body>
+

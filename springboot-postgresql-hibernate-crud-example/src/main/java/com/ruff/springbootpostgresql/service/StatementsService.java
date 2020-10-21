@@ -1,9 +1,12 @@
-package BAK;
+package com.ruff.springbootpostgresql.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.ruff.springbootpostgresql.model.statements;
+import com.ruff.springbootpostgresql.repository.StatementsRepository;
 
 @Service
 public class StatementsService {

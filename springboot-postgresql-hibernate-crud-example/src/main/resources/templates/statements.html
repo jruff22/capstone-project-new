@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Statements</title>
+	</head>
+	<body>
+		<h1>Statements</h1>
+		<div>
+			<nobr>
+				<a th:href="@{/}">Home</a>
+			</nobr>
+		</div>
+		<br/><br/>
+		<div>
+			<table border="1">
+				<tr>
+					<th>Payment Amount</th>
+					<th>Payment Date</th>
+					<th>Account Number</th>
+					<th>Statement ID</th>
+					<th>Loan ID</th>
+				</tr>
+				
+				<tr th:each="s : ${s.payment_amt}">
+					<td th:utext="${s.payment_date}">...</td>
+					<td th:utext= "${s.acct_number}">...</td>
+					<td th:utext="${s.statement_id}">...</td>
+					<td th:utext= "${s.loan_id}">...</td>
+				</tr>
+				
+				</table>
+                 </div>
+                </body>
+</html>

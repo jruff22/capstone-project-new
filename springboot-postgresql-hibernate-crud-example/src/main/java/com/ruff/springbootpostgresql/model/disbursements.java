@@ -1,4 +1,4 @@
-package BAK;
+package com.ruff.springbootpostgresql.model;
 
 import java.util.ArrayList;
 import java.util.Date;

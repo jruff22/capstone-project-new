@@ -1,9 +1,12 @@
-package BAK;
+package com.ruff.springbootpostgresql.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.ruff.springbootpostgresql.model.loan_info;
+import com.ruff.springbootpostgresql.repository.LoanInfoRepository;
 
 @Service
 public class LoanInfoService {
@@ -16,8 +19,8 @@ public class LoanInfoService {
 	}
 		
 		public List <loan_info> findAll() {
-			List<loan_info> loanInfo = loanInfoRepo.findAll();
-			return loanInfo; 
+			List<loan_info> loan_Info = loanInfoRepo.findAll();
+			return loan_Info; 
 		}
 	}
 

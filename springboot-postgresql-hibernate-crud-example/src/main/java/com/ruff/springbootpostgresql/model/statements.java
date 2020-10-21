@@ -1,4 +1,4 @@
-package BAK;
+package com.ruff.springbootpostgresql.model;
 
 import java.util.Date;
 
@@ -9,12 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+@Entity
+@Table(name = "statements")
 
 public class statements {
 	
-	@Entity
-	@Table(name = "statement")
-	public class statement {
 		
 		@Id
 		@GeneratedValue(generator="statements_statement_id_seq", strategy=GenerationType.SEQUENCE)
@@ -23,37 +22,40 @@ public class statements {
 				sequenceName="statements_statement_id_seq",
 				allocationSize=1
 				)
+		private Long statement_id;
 		
-		@Column(name = "statement_id")
-		private long statement_id;
 		@Column(name = "payment_amt")
 		private Double payment_amt;
+		
 		@Column(name = "payment_date")
 		private Date payment_date;
+		
 		@Column(name = "acct_number")
 		private long acct_number;
+		
 		@Column(name = "loan_id")
 		private long loan_id;
+	
 		
-		public statement() {
+		
+		public statements() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-		public statement(long statement_id, Double payment_amt, Date payment_date, long acct_number, long loan_id) {
+		public statements(long statement_id, Double payment_amt, Date payment_date, long acct_number, long loan_id) {
 			super();
-			this.statement_id = statement_id;
-			this.payment_amt = payment_amt;
 			this.payment_date = payment_date;
 			this.acct_number = acct_number;
+			this.statement_id = statement_id;
 			this.loan_id = loan_id;
 		}
 
-		public long getStatement_id() {
+		public Long getStatement_id() {
 			return statement_id;
 		}
 
-		public void setStatement_id(long statement_id) {
+		public void setStatement_id(Long statement_id) {
 			this.statement_id = statement_id;
 		}
 
@@ -93,6 +95,4 @@ public class statements {
 		}
 		
 		
-		
 
-}

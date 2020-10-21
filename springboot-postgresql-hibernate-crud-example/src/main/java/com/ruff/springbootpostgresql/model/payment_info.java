@@ -1,4 +1,4 @@
-package BAK;
+package com.ruff.springbootpostgresql.model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,8 +25,7 @@ public class payment_info {
 			allocationSize=1
 			)
 	
-	@Column(name = "payment_id")
-	private long payment_id;
+	private Long payment_id;
 	@Column(name = "loan_id")
 	private long loan_id;
 	@Column(name = "payment_amt")
@@ -35,26 +34,29 @@ public class payment_info {
 	private Date payment_date;
 	@Column(name = "acct_type")
 	private String acct_type;
+	@Column(name = "payment_type")
+	private String payment_type; 
 	
 	public payment_info() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public payment_info(long payment_id, long loan_id, Double payment_amt, Date payment_date, String acct_type) {
+	public payment_info(Long payment_id, long loan_id, Double payment_amt, Date payment_date, String acct_type) {
 		super();
 		this.payment_id = payment_id;
 		this.loan_id = loan_id;
 		this.payment_amt = payment_amt;
 		this.payment_date = payment_date;
 		this.acct_type = acct_type;
+		this.payment_type = payment_type;
 	}
 
-	public long getPayment_id() {
+	public Long getPayment_id() {
 		return payment_id;
 	}
 
-	public void setPayment_id(long payment_id) {
+	public void setPayment_id(Long payment_id) {
 		this.payment_id = payment_id;
 	}
 
@@ -89,6 +91,16 @@ public class payment_info {
 	public void setAcct_type(String acct_type) {
 		this.acct_type = acct_type;
 	}
+
+	public String getPayment_type() {
+		return payment_type;
+	}
+
+	public void setPayment_type(String payment_type) {
+		this.payment_type = payment_type;
+	}
+
+	
 	
 	
 	}

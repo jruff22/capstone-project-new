@@ -8,50 +8,32 @@
 		<h1>Customer Info</h1>
 		<div>
 			<nobr>
-				<a th:href="@{/}">Back to Index</a>
+				<a th:href="@{/}">Home</a>
 			</nobr>
 		</div>
 		<br/><br/>
 		<div>
 			<table border="1">
 				<tr>
-					<th>Customer Info</th>
 					<th>Customer ID</th>
 					<th>Loan Id</th>
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Birth date</th>
 					<th>SSN</th>
-					
-					
-					
 				</tr>
-				<tr th:each="customer_info : ${customer_info}">
-					<td th:utext="${customer_info.customer_id}">...</td>
-					<td th:utext= "${customer_info.loan_id}">...</td>
-					<td th:utext="${customer_info.first_name}">...</td>
-					<td th:utext= "${customer_info.last_name}">...</td>
-					<td th:utext="${customer_info.birthdate}">...</td>
-					<td th:utext="${customer_info.ssn}">...</td>
+				
+				<tr th:each="customer : ${customerinfo}">
+					<td th:utext="${customer.customer_id}">...</td>
+					<td th:utext= "${customer.loan_id}">...</td>
+					<td th:utext="${customer.first_name}">...</td>
+					<td th:utext= "${customer.last_name}">...</td>
+					<td th:utext="${customer.birthdate}">...</td>
+					<td th:utext="${customer.ssn}">...</td>
 				</tr>
+				
 				</table>
-						<!-- <table>
-							<tr th:each="pet : ${employee.pets}"> should match model name
-								<td th:utext="${pet.pet_id}">...</td> columns in table
-								<td th:utext="${pet.name}">...</td>                                                                                                                                <td th:utext="${pet.name}">...</td>
-                                <td th:utext="${pet.species}">...</td>
-                                <td th:utext="${pet.age}">...</td>
-                                <td th:utext="${pet.bites}">...</td>
-                           </tr>
-                        <table>
-                  <tr th:each="employees_Survey_Answers : ${employee.Employees_Survey_Answers}"> should match model name
-                  <td th:utext="${employees_Survey_Answers.question_id}">...</td> columns in table
-                  <td th:utext="${employees_Survey_Answers.answer_id}">...</td>
-                  <td th:utext="${employees_Survey_Answers.emp_id}">...</td> -->
-                 <!--  </tr>
-                  </table>
-                  </tr>
-                  </table> -->
+				<h2>The End</h2>
                  </div>
                 </body>
 </html>

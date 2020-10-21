@@ -20,11 +20,11 @@ public class CustomerInfoController {
 		return "index";
 	}
 	
-	@GetMapping ("/customerInfo")
+	@GetMapping ("/customer-info")
 	public String getCustomerInfo (Model model) {
 		List<customer_info> customerInfo = customerInfoService.findAll();
 		model.addAttribute("customerinfo", customerInfo);
-		return "customerInfo";
+		return "customer-info";
 		
 	}
 

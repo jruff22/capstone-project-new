@@ -1,4 +1,4 @@
-package BAK;
+package com.ruff.springbootpostgresql.controller;
 
 import java.util.List;
 
@@ -7,22 +7,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.ruff.springbootpostgresql.model.disbursements;
+import com.ruff.springbootpostgresql.service.DisbursementsService;
+
 @Controller
 public class DisbursementController {
 	
 	@Autowired
 	private DisbursementsService disbursementService;
 	
-	@GetMapping(value = {"/", "index"})
-	public String index(Model model) {
-		return "index";
-	}
 	
-	@GetMapping ("/disbursementInfo")
+	@GetMapping ("/disbursements")
 	public String getDisbursementInfo (Model model) {
 		List<disbursements> disbursementInfo = disbursementService.findAll();
-		model.addAttribute("disbursement info", disbursementInfo);
-		return "disbursementInfo";
+		model.addAttribute("disbursements", disbursementInfo);
+		return "disbursements";
 
 }
 
